@@ -1,0 +1,98 @@
+import type { CategoryMeta } from '@/types';
+
+export const categories: CategoryMeta[] = [
+  {
+    id: 'image',
+    name: 'Pixel World',
+    slug: 'image-tools',
+    tagline: 'Image Tools',
+    description: 'Compress, convert, and optimize images directly in your browser. No uploads, no waiting.',
+    icon: 'Image',
+    color: '#1de2c8',
+    glow: 'rgba(29, 226, 200, 0.35)',
+    world: 'pixel',
+  },
+  {
+    id: 'document',
+    name: 'Document Hub',
+    slug: 'document-tools',
+    tagline: 'PDF / Document Tools',
+    description: 'Merge, split, convert, and manipulate documents and PDFs without leaving your browser.',
+    icon: 'FileText',
+    color: '#60a5fa',
+    glow: 'rgba(96, 165, 250, 0.35)',
+    world: 'document',
+  },
+  {
+    id: 'text',
+    name: 'Text Space',
+    slug: 'text-tools',
+    tagline: 'Text Tools',
+    description: 'Count words, format text, clean up content, and transform words with fast local processing.',
+    icon: 'Type',
+    color: '#34d399',
+    glow: 'rgba(52, 211, 153, 0.35)',
+    world: 'text',
+  },
+  {
+    id: 'developer',
+    name: 'Code Lab',
+    slug: 'developer-tools',
+    tagline: 'Developer Tools',
+    description: 'Format, validate, and transform code and data formats. Built for developers who work in the browser.',
+    icon: 'Code2',
+    color: '#a78bfa',
+    glow: 'rgba(167, 139, 250, 0.35)',
+    world: 'code',
+  },
+  {
+    id: 'calculator',
+    name: 'Number Core',
+    slug: 'calculators',
+    tagline: 'Calculators',
+    description: 'Quick, accurate calculators for everyday math, finance, and conversions.',
+    icon: 'Calculator',
+    color: '#fbbf24',
+    glow: 'rgba(251, 191, 36, 0.35)',
+    world: 'number',
+  },
+  {
+    id: 'color',
+    name: 'Color Galaxy',
+    slug: 'color-tools',
+    tagline: 'Color / Design Tools',
+    description: 'Generate palettes, convert color formats, and explore color theory for your next project.',
+    icon: 'Palette',
+    color: '#f472b6',
+    glow: 'rgba(244, 114, 182, 0.35)',
+    world: 'color',
+  },
+  {
+    id: 'security',
+    name: 'Cyber Vault',
+    slug: 'security-tools',
+    tagline: 'Security Tools',
+    description: 'Generate strong passwords, hash data, and secure your digital life with privacy-first tools.',
+    icon: 'ShieldCheck',
+    color: '#22d3ee',
+    glow: 'rgba(34, 211, 238, 0.35)',
+    world: 'security',
+  },
+  {
+    id: 'data',
+    name: 'Data Center',
+    slug: 'data-tools',
+    tagline: 'Data Tools',
+    description: 'Convert, format, and transform data between CSV, JSON, and other structured formats.',
+    icon: 'Database',
+    color: '#fb923c',
+    glow: 'rgba(251, 146, 60, 0.35)',
+    world: 'data',
+  },
+];
+
+export const getCategory = (slug: string): CategoryMeta | undefined =>
+  categories.find((c) => c.slug === slug);
+
+export const getCategoryById = (id: string): CategoryMeta | undefined =>
+  categories.find((c) => c.id === id);
